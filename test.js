@@ -1,5 +1,5 @@
 const crypto = require('crypto');
-const hwRng = require('./build/Release/hw_rng');
+const hwRng = require('./index.js');
 
 function getChaChaHardwareRandom(byteLength = 32) {
     const key = Buffer.alloc(32);

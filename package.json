@@ -2,12 +2,13 @@
   "name": "hw-rng",
   "version": "1.0.0",
   "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "mtkcnl",
+  "license": "AGPL-3.0-only",
   "description": "",
   "dependencies": {
     "node-addon-api": "^8.5.0"
