@@ -4,12 +4,16 @@
 #ifdef _WIN32
   #include <intrin.h>
 #else
-  #include <cpuid.h>  
+  #include <cpuid.h>
+#endif  
 #include <stdint.h>
 #include <string.h>
 
-// RDRAND: Leaf 1, ECX bit 30
-// RDSEED: Leaf 7, EBX bit 18
+/*
+RDRAND: Leaf 1, ECX bit 30
+RDSEED: Leaf 7, EBX bit 18
+https://www.intel.com/content/www/us/en/developer/articles/guide/intel-digital-random-number-generator-drng-software-implementation-guide.html#:~:text=Table%201.%20Feature%20information%20returned%20in%20the%20ECX%20register
+*/
 
 int check_cpu_support(uint32_t leaf, uint32_t subleaf, int reg_idx, int bit) {
     uint32_t regs[4]; // eax, ebx, ecx, edx
