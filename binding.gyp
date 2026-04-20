@@ -9,7 +9,7 @@
           {
             "msvs_settings": {
               "VCCLCompilerTool": {
-                "AdditionalOptions": [ "/arch:AVX" ]
+                "AdditionalOptions": [ "/Ox", "/arch:AVX512" ]
               }
             }
           },
