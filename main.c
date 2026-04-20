@@ -2,9 +2,9 @@
 #include <node_api.h>
 #include <immintrin.h>
 #ifdef _WIN32
-#include <intrin.h>
+    #include <intrin.h>
 #else
-#include <cpuid.h>
+    #include <cpuid.h>
 #endif
 #include <stdint.h>
 #include <string.h>
@@ -110,6 +110,8 @@ napi_value FillBuffer(napi_env env, napi_callback_info info)
         return null_return;
     else
         napi_throw_error(env, NULL, "Error while getting null.");
+    
+    return NULL;
 }
 
 napi_value Init(napi_env env, napi_value exports)
